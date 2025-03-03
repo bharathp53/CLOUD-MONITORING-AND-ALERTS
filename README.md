@@ -103,3 +103,7 @@ Ensure your AWS resources are sending metrics to CloudWatch:
   - Condition: > 0 for 1 minute
   - Action: Send email notification
 ---
+
+## **Output:**
+
+### Dashboard
