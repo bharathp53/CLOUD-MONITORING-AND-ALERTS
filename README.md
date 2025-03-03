@@ -107,7 +107,9 @@ Ensure your AWS resources are sending metrics to CloudWatch:
 ## **Output:**
 
 - Dashboard
+
 ![Image](https://github.com/user-attachments/assets/4d071640-039b-4983-98f4-4ca146cf1d9b)
 
 - Alarms
-- 
+
+![Image](https://github.com/user-attachments/assets/bdac134a-3adf-4c2e-a88c-8f2a0f682c6f)
