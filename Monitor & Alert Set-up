@@ -1,82 +1,85 @@
-Step 1: Log in to AWS Management Console
-    Go to the AWS Management Console.
+This guide walks you through setting up monitoring and alerts for a cloud-based application using AWS CloudWatch.
+By the end, you’ll have a dashboard showcasing key metrics and configured alerts for your application
 
-    Sign in with your credentials.
+Step 1: Log in to AWS Management Console
+    1.Go to the AWS Management Console.
+
+    2.Sign in with your credentials.
 
 Step 2: Enable CloudWatch Monitoring
   Navigate to CloudWatch:
 
-    In the AWS Management Console, search for CloudWatch in the search bar and select it.
+    1.In the AWS Management Console, search for CloudWatch in the search bar and select it.
 
-    Ensure your resources (e.g., EC2 instances, Lambda functions, RDS databases) are sending metrics to CloudWatch:
+    2.Ensure your resources (e.g., EC2 instances, Lambda functions, RDS databases) are sending metrics to CloudWatch:
 
-    For EC2 instances, enable Detailed Monitoring in the EC2 dashboard if needed.
+    3. For EC2 instances, enable Detailed Monitoring in the EC2 dashboard if needed.
 
-    For Lambda functions, metrics are automatically sent to CloudWatch.
+    4.For Lambda functions, metrics are automatically sent to CloudWatch.
 
-    For RDS databases, ensure monitoring is enabled in the RDS dashboard.
+    5.For RDS databases, ensure monitoring is enabled in the RDS dashboard.
 
 Step 3: Create a CloudWatch Dashboard
-    In the CloudWatch console, go to Dashboards in the left-hand menu.
+    1.In the CloudWatch console, go to Dashboards in the left-hand menu.
 
-    Click Create Dashboard.
+    2.Click Create Dashboard.
 
-    Give your dashboard a name (e.g., MyApp-Monitoring-Dashboard).
+    3.Give your dashboard a name (e.g., MyApp-Monitoring-Dashboard).
 
-    Add widgets to visualize metrics:
+    4.Add widgets to visualize metrics:
 
-    Click Add Widget.
+    5. Click Add Widget.
 
-    Choose a widget type (e.g., Line, Stacked Area, Number).
+    6.Choose a widget type (e.g., Line, Stacked Area, Number).
 
-    Select the metrics you want to monitor:
+    7.Select the metrics you want to monitor:
 
-    EC2: CPUUtilization, NetworkIn, NetworkOut, DiskReadOps, DiskWriteOps.
+    8.EC2: CPUUtilization, NetworkIn, NetworkOut, DiskReadOps, DiskWriteOps.
 
-    Lambda: Invocations, Errors, Duration, Throttles.
+    9.Lambda: Invocations, Errors, Duration, Throttles.
 
-    RDS: CPUUtilization, DatabaseConnections, FreeStorageSpace.
+    10.RDS: CPUUtilization, DatabaseConnections, FreeStorageSpace.
 
-    Customize the time range (e.g., last 1 hour, last 24 hours).
+    11.Customize the time range (e.g., last 1 hour, last 24 hours).
 
-    Repeat the process to add more widgets for other metrics.
+    12.Repeat the process to add more widgets for other metrics.
 
-    Arrange the widgets on the dashboard for better visibility.
+    13.Arrange the widgets on the dashboard for better visibility.
 
 Step 4: Set Up CloudWatch Alarms
   In the CloudWatch console, go to Alarms in the left-hand menu.
 
-    Click Create Alarm.
+    1.Click Create Alarm.
 
-    Choose a metric:
+    2.Choose a metric:
 
-    Click Select Metric.
+    3.Click Select Metric.
 
-    Choose the namespace (e.g., EC2, Lambda, RDS).
+    4.Choose the namespace (e.g., EC2, Lambda, RDS).
 
-    Select the metric (e.g., CPUUtilization for EC2, Errors for Lambda).
+    5.Select the metric (e.g., CPUUtilization for EC2, Errors for Lambda).
 
-    Set the alarm conditions:
+    6.Set the alarm conditions:
 
-    Define the threshold (e.g., CPU > 80% for 5 minutes).
+    7.Define the threshold (e.g., CPU > 80% for 5 minutes).
 
-    Choose the statistic (e.g., Average, Maximum).
+    8.Choose the statistic (e.g., Average, Maximum).
 
-    Set the period (e.g., 1 minute, 5 minutes).
+    9.Set the period (e.g., 1 minute, 5 minutes).
 
-    Configure actions:
+    10.Configure actions:
 
-    Click Add Notification.
+    11.Click Add Notification.
 
-    Choose an existing SNS Topic or create a new one.
+    12.Choose an existing SNS Topic or create a new one.
 
-    Enter your email address to receive notifications.
+    13.Enter your email address to receive notifications.
 
-    Confirm the subscription by clicking the link in the confirmation email.
+    14.Confirm the subscription by clicking the link in the confirmation email.
 
 Step 5: Test Your Setup
-    Simulate high CPU usage or errors on your application.
+    1.Simulate high CPU usage or errors on your application.
 
-    Verify that the metrics appear on your CloudWatch dashboard.
+    2.Verify that the metrics appear on your CloudWatch dashboard.
 
-    Check if the alarm triggers and you receive a notification via email.
+    3.Check if the alarm triggers and you receive a notification via email.
