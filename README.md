@@ -37,24 +37,15 @@ Ensure your AWS resources are sending metrics to CloudWatch:
 - For **Lambda functions**, metrics are automatically sent to CloudWatch.
 - For **RDS databases**, ensure monitoring is enabled in the RDS dashboard.
 
----
 
 ### **2. Create a CloudWatch Dashboard**
 1. Go to the **CloudWatch** console in the AWS Management Console.
 2. Navigate to **Dashboards** and click **Create Dashboard**.
-3. Name your dashboard (e.g., `MyApp-Monitoring-Dashboard`).
-4. Add widgets to visualize metrics:
-   - Click **Add Widget**.
-   - Choose a widget type (e.g., Line, Stacked Area, Number).
-   - Select the metrics you want to monitor:
-     - **EC2**: CPUUtilization, NetworkIn, NetworkOut, DiskReadOps, DiskWriteOps.
-     - **Lambda**: Invocations, Errors, Duration, Throttles.
-     - **RDS**: CPUUtilization, DatabaseConnections, FreeStorageSpace.
-   - Customize the time range (e.g., last 1 hour, last 24 hours).
+3. Name your dashboard (e.g., `Bharath-AWS`).
+4. Add widgets to visualize metrics.
 5. Repeat the process to add more widgets for other metrics.
 6. Arrange the widgets on the dashboard for better visibility.
 
----
 
 ### **3. Set Up CloudWatch Alarms**
 1. In the CloudWatch console, go to **Alarms** and click **Create Alarm**.
@@ -76,7 +67,6 @@ Ensure your AWS resources are sending metrics to CloudWatch:
    - Trigger a Lambda function (e.g., to remediate the issue).
 6. Name your alarm (e.g., `High-CPU-Alarm`) and click **Create Alarm**.
 
----
 
 ### **4. Test Your Setup**
 - Simulate high CPU usage or errors on your application.
